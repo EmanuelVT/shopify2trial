@@ -6,8 +6,7 @@ color: {{ block.settings.announcement_text_color }}" aria-label="{{'block.settin
   {{ block.shopify_attributes }}">
   {%- if block.settings.text != blank -%}
   {%- if block.settings.link != blank -%}
-  <a href="{{ block.settings.link }}"
-    styles="text-decoration:none; color: {{ block.settings.announcement_text_color }}">
+  <a href="{{ block.settings.link }}" style="text-decoration:none; color: {{ block.settings.announcement_text_color }}">
     {%- endif -%}
 
     {{ block.settings.text | escape }}
