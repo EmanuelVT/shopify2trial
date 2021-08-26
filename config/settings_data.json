@@ -17,8 +17,8 @@
             "type": "announcement",
             "settings": {
               "text": "50% OFF on ADIDAS",
-              "background_color": "#4c43d2",
-              "announcement_text_color": "#bf8989",
+              "background_color": "#000000",
+              "announcement_text_color": "#ffffff",
               "link": "shopify:\/\/collections\/adidas"
             }
           }
