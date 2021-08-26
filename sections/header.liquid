@@ -40,10 +40,41 @@
   </ul>
 </header>
 
+{% case section.settings.header_type%}
+{% when 'header1' %}
+
+{% when 'header2' %}
+
+{% when 'header3' %}
+
+
+{% endcase %}
+
 {% schema %}
 {
 "name": "t:sections.header.name",
 "settings": [
+{
+"type": "select",
+"id": "header_type",
+"label": "Type of Header",
+"options": [
+{
+"value": "header1",
+"label": "Header 1"
+},
+{
+"value": "header2",
+"label": "Header 2"
+},
+{
+"value": "header3",
+"label": "Header 3"
+}
+],
+"default": "header3"
+},
+
 {
 "type": "image_picker",
 "id": "logo",
