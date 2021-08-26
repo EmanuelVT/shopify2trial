@@ -1,7 +1,7 @@
 {{ 'section-multicolumn.css' | asset_url | stylesheet_tag }}
 <link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
 <noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
-<h1>Hiiiiii!!!!!</h1>
+
 <div
   class="multicolumn background-{{ section.settings.background_style }}{% if section.settings.title == blank %} no-heading{% endif %}">
   <div class="page-width">
@@ -90,7 +90,7 @@
       {%- endif-%}
     </div>
   </div>
-  <p>lolololololol</p>
+
 </div>
 
 {% schema %}
