@@ -60,7 +60,7 @@
           "type": "video"
         },
         "product": {
-            "type": "product"
+          "type": "product"
         },
         "collection": {
           "type": "collection"
@@ -93,6 +93,25 @@
         "column2",
         "column3"
       ]
+    },
+    "image_text": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading"
+        },
+        "text": {
+          "type": "text"
+        },
+        "button": {
+          "type": "button"
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ]
     }
   },
   "order": [
@@ -101,6 +120,7 @@
     "featured_products",
     "collage",
     "video",
+    "image_text",
     "multi_column"
   ]
 }
