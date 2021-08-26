@@ -1,3 +1,118 @@
+{% case section.settings.header_type%}
+{% when 'header1' %}
+<header className="header header1">
+  <ul className="header1__collections-nav">
+
+    <li className="link-1">
+      <a href="/link">Link</a>
+      <ul className="header1__sub-links">
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+    </li>
+    <li className="link-2">
+      <a href="/link">Link</a>
+      <ul className="header1__sub-links">
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+    </li>
+    <li className="link-3">
+      <a href="/link">Link</a>
+      <ul className="header1__sub-links">
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+    </li>
+  </ul>
+  <div className="header1__logo">
+    <a href="/link">Company</a>
+  </div>
+  <ul className="header1__collections-nav">
+    <li className="link-4">
+      <a href="/link">Link</a>
+      <ul className="header1__sub-links">
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+    </li>
+    <li className="link-5">
+      <a href="/link">Link</a>
+      <ul className="header1__sub-links">
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+    </li>
+    <li className="link-6">
+      <a href="/link">Link</a>
+      <ul className="header1__sub-links">
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+    </li>
+    <a href="/cart"><i className="lni lni-cart"></i></a>
+    <a href="/account"><i class="lni lni-user"></i></a>
+  </ul>
+</header>
+
+{% when 'header2' %}
+<header className="header header2">
+  <div className="header2__logo">
+    <a href="/link">Company</a>
+  </div>
+
+  <ul className="header2__collections-nav">
+    <li className="link-1">
+      <a href="/link">Link</a>
+      <ul className="header2__sub-links">
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+    </li>
+
+    <li className="link-2">
+      <a href="/link">Link</a>
+      <ul className="header2__sub-links">
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+    </li>
+
+
+    <li className="link-3">
+      <a href="/link">Link</a>
+      <ul className="header2__sub-links">
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <div className="header2__collections-nav">
+    <a href="/cart"><i className="lni lni-cart"></i></a>
+    <a href="/account"><i class="lni lni-user"></i></a>
+  </div>
+</header>
+
+{% when 'header3' %}
 <header class="header header3">
   <div class="header3__logo">
     <a href="/link">Company</a>
@@ -39,14 +154,6 @@
     <a href="/account"><i class="lni lni-user"></i></a>
   </ul>
 </header>
-
-{% case section.settings.header_type%}
-{% when 'header1' %}
-
-{% when 'header2' %}
-
-{% when 'header3' %}
-
 
 {% endcase %}
 
