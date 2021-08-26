@@ -27,7 +27,10 @@
         "button"
       ],
       "settings": {
+<<<<<<< HEAD
         "image": "shopify:\/\/shop_images\/cloudy-sky-from-above.jpg",
+=======
+>>>>>>> staging
         "adapt_height_first_image": false,
         "desktop_text_box_position": "flex-end",
         "show_text_box": true,
@@ -100,6 +103,12 @@
           }
         },
         "product": {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          "type": "product"
+=======
+>>>>>>> staging
           "type": "product",
           "settings": {
             "product": "",
@@ -107,6 +116,10 @@
             "image_padding": false,
             "secondary_background": false
           }
+<<<<<<< HEAD
+=======
+>>>>>>> staging
+>>>>>>> staging
         },
         "collection": {
           "type": "collection",
@@ -166,6 +179,31 @@
         "column1",
         "column2",
         "column3"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      ]
+    },
+    "image_text": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading"
+        },
+        "text": {
+          "type": "text"
+        },
+        "button": {
+          "type": "button"
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ]
+=======
+>>>>>>> staging
       ],
       "settings": {
         "title": "Multicolumn",
@@ -177,6 +215,10 @@
         "button_link": "",
         "swipe_on_mobile": false
       }
+<<<<<<< HEAD
+=======
+>>>>>>> staging
+>>>>>>> staging
     }
   },
   "order": [
@@ -185,6 +227,7 @@
     "featured_products",
     "collage",
     "video",
+    "image_text",
     "multi_column"
   ]
 }
