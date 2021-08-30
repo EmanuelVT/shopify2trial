@@ -28,6 +28,9 @@
   <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
   {{ content_for_header }}
 
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
+    integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+
   {%- liquid
       assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
       assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
@@ -128,7 +131,7 @@
   </script>
 </head>
 
-<body class="fixed-nav nav-transparent">
+<body style="overflow-x: hidden;">
   <a class="skip-to-content-link button visually-hidden" href="#MainContent">
     {{ "accessibility.skip_to_text" | t }}
   </a>
@@ -167,6 +170,37 @@
     window.accessibilityStrings = {
       shareSuccess: `{{ 'general.share.success_message' | t }}`,
     }
+
+    function headerSize() {
+      var $headerHeight = $('div#shopify-section-header').outerHeight();
+      $('#PageContainer').css('padding-top', $headerHeight);
+    }
+
+    function debounce(fn, delay) {
+      var timer = null;
+      return function () {
+        var context = this,
+          args = arguments;
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+          fn.apply(context, args);
+        }, delay);
+      };
+    }
+
+    $(window).on("load", headerSize);
+    $(window).on("resize", debounce(500, headerSize));
+
+    $(window).scroll(function () {
+      scroll = $(window).scrollTop();
+      if (scroll >= 1) {
+        $('.white-fixed').css('top', '0');
+        $('.transparent-fixed').css('top', '0');
+      } else {
+        $('.white-fixed').css('top', 'initial');
+        $('.transparent-fixed').css('top', 'initial');
+      }
+    });
   </script>
 </body>
 
