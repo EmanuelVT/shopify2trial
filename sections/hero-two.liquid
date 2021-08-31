@@ -1,0 +1,212 @@
+<div class="hero hero2 aligned-right {{section.settings.hero_size}}">
+    <div class="hero2__collection1">
+        {%- if section.settings.image != blank -%}
+        <img class="bg"
+            srcset="{%- if section.settings.image.width >= 165 -%}{{ section.settings.image | img_url: '165x' }} 165w,{%- endif -%}
+                  {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | img_url: '360x' }} 360w,{%- endif -%}
+                  {%- if section.settings.image.width >= 535 -%}{{ section.settings.image | img_url: '535x' }} 535w,{%- endif -%}
+                  {%- if section.settings.image.width >= 750 -%}{{ section.settings.image | img_url: '750x' }} 750w,{%- endif -%}
+                  {%- if section.settings.image.width >= 1070 -%}{{ section.settings.image | img_url: '1070x' }} 1070w,{%- endif -%}
+                  {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | img_url: '2000x' }} 2000w,{%- endif -%}"
+            src="{{ section.settings.image | img_url: '1500x' }}"
+            sizes="(min-width: {{ settings.page_width }}px) 2000px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+            alt="{{ section.settings.image.alt | escape }}" loading="lazy" width="{{ section.settings.image.width }}"
+            height="{{ section.settings.image.height }}">
+        {%- else -%}
+        <img src="https://images.pexels.com/photos/3605015/pexels-photo-3605015.jpeg?cs=srgb&dl=pexels-joshua-abner-3605015.jpg&fm=jpg"
+            class="bg"></img>
+
+        {%- endif -%}
+
+        {% assign opacity1 = section.settings.opacity_img1 | divided_by: 100.00%}
+        {% assign opacity2 = section.settings.opacity_img2 | divided_by: 100.00%}
+
+        <div class="hero2__content-container"
+            style="background: {{ section.settings.background_color_img1 | color_modify: 'alpha', opacity1 }}">
+            <div class="hero2__info">
+                {%- for block in section.blocks -%}
+                {%- case block.type -%}
+                {%- when 'button-left'-%}
+                {%- if block.settings.button_label != blank -%}
+                <a href="{{block.settings.button_link}}" target="_blank" class="hero2__button"
+                    {% if block.settings.button_link == blank %} aria-disabled="true" {% endif %}
+                    {{ block.shopify_attributes }}>
+                    {{ block.settings.button_label | escape }}
+                </a>
+                {%- endif -%}
+                {%- endcase -%}
+                {%- endfor -%}
+            </div>
+        </div>
+    </div>
+    <div class="hero2__collection2">
+        {%- if section.settings.image_two != blank -%}
+        <img class="bg"
+            srcset="{%- if section.settings.image_two.width >= 165 -%}{{ section.settings.image_two | img_url: '165x' }} 165w,{%- endif -%}
+                  {%- if section.settings.image_two.width >= 360 -%}{{ section.settings.image_two | img_url: '360x' }} 360w,{%- endif -%}
+                  {%- if section.settings.image_two.width >= 535 -%}{{ section.settings.image_two | img_url: '535x' }} 535w,{%- endif -%}
+                  {%- if section.settings.image_two.width >= 750 -%}{{ section.settings.image_two | img_url: '750x' }} 750w,{%- endif -%}
+                  {%- if section.settings.image_two.width >= 1070 -%}{{ section.settings.image_two | img_url: '1070x' }} 1070w,{%- endif -%}
+                  {%- if section.settings.image_two.width >= 1500 -%}{{ section.settings.image_two | img_url: '2000x' }} 2000w,{%- endif -%}"
+            src="{{ section.settings.image_two | img_url: '1500x' }}"
+            sizes="(min-width: {{ settings.page_width }}px) 2000px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+            alt="{{ section.settings.image_two.alt | escape }}" loading="lazy"
+            width="{{ section.settings.image_two.width }}" height="{{ section.settings.image_two.height }}">
+        {%- else -%}
+        <img src="https://images.pexels.com/photos/5543421/pexels-photo-5543421.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+            class="bg"></img>
+
+        {%- endif -%}
+
+        <div class="hero2__content-container"
+            style="background: {{ section.settings.background_color_img2 | color_modify: 'alpha', opacity2 }}">
+            <div class="hero2__info">
+                {%- for block in section.blocks -%}
+                {%- case block.type -%}
+                {%- when 'button-right'-%}
+                {%- if block.settings.button_label != blank -%}
+                <a href="{{block.settings.button_link}}" target="_blank" class="hero2__button"
+                    {% if block.settings.button_link == blank %} aria-disabled="true" {% endif %}
+                    {{ block.shopify_attributes }}>
+                    {{ block.settings.button_label | escape }}
+                </a>
+                {%- endif -%}
+                {%- endcase -%}
+                {%- endfor -%}
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+
+
+
+{% schema %}
+{
+"name": "Hero Two",
+"class": "spaced-section spaced-section--full-width",
+"settings": [
+{
+"type": "select",
+"id": "hero_size",
+"options": [
+{
+"value": "hero2__25vh",
+"label": "25%"
+},
+{
+"value": "hero2__50vh",
+"label": "50%"
+},
+{
+"value": "hero2__75vh",
+"label": "75%"
+},
+{
+"value": "hero2__100vh",
+"label": "100%"
+}
+],
+"default": "hero2__100vh",
+"label": "Hero Size"
+},
+{
+"type": "image_picker",
+"id": "image",
+"label": "Image right"
+},
+{
+"type": "color",
+"id": "background_color_img1",
+"label": "Background filter",
+"default": "#000000"
+},
+{
+"type": "range",
+"id": "opacity_img1",
+"min": 0,
+"max": 100,
+"step": 1,
+"label": "Opacity",
+"default": 50
+},
+{
+"type": "image_picker",
+"id": "image_two",
+"label": "Image left"
+},
+{
+"type": "color",
+"id": "background_color_img2",
+"label": "Background filter",
+"default": "#000000"
+},
+{
+"type": "range",
+"id": "opacity_img2",
+"min": 0,
+"max": 100,
+"step": 1,
+"label": "Opacity",
+"default": 50
+}
+
+],
+"blocks": [
+{
+"type": "button-left",
+"name": "Button Left",
+"limit": 1,
+"settings": [
+{
+"type": "text",
+"id": "button_label",
+"default": "View More",
+"label": "t:sections.image-with-text.blocks.button.settings.button_label.label",
+"info": "t:sections.image-with-text.blocks.button.settings.button_label.info"
+},
+{
+"type": "url",
+"id": "button_link",
+"label": "t:sections.image-with-text.blocks.button.settings.button_link.label"
+}
+]
+},
+{
+"type": "button-right",
+"name": "Button Right",
+"limit": 1,
+"settings": [
+{
+"type": "text",
+"id": "button_label",
+"default": "View More",
+"label": "t:sections.image-with-text.blocks.button.settings.button_label.label",
+"info": "t:sections.image-with-text.blocks.button.settings.button_label.info"
+},
+{
+"type": "url",
+"id": "button_link",
+"label": "t:sections.image-with-text.blocks.button.settings.button_link.label"
+}
+]
+}
+],
+"presets": [
+{
+"name": "Hero Two",
+"blocks": [
+{
+"type": "button-left"
+},
+{
+"type": "button-right"
+}
+]
+}
+]
+}
+{% endschema %}

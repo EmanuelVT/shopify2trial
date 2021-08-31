@@ -336,6 +336,22 @@ table {
     margin-bottom: 50px
 }
 
+.hero1__25vh {
+    height: 25vh;
+}
+
+.hero1__50vh {
+    height: 50vh;
+}
+
+.hero1__75vh {
+    height: 75vh;
+}
+
+.hero1__100vh {
+    height: 100vh;
+}
+
 .hero1.aligned-center .hero1__content-container {
     -moz-box-pack: center;
     justify-content: center
@@ -405,7 +421,8 @@ table {
     margin: 0 70px 0 auto;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out
+    transition: all .2s ease-in-out;
+    margin: 0 auto;
 }
 
 .hero1__button:hover {
@@ -419,7 +436,24 @@ table {
     overflow-x: hidden;
     position: relative;
     display: -moz-box;
-    display: flex
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.hero2__25vh {
+    height: 25vh;
+}
+
+.hero2__50vh {
+    height: 50vh;
+}
+
+.hero2__75vh {
+    height: 75vh;
+}
+
+.hero2__100vh {
+    height: 100vh;
 }
 
 .hero2 .hero2__collection1 {
@@ -8304,6 +8338,11 @@ body {
     width: 100%;
     z-index: 5;
     background: transparent;
+
+}
+
+.transparent-static a {
+    color: white;
 }
 
 .white-fixed {
@@ -8327,4 +8366,9 @@ body {
     width: 100%;
     background: transparent;
 
+
+}
+
+.transparent-fixed a {
+    color: white;
 }
