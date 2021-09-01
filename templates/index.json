@@ -177,9 +177,47 @@
         "button_link": "",
         "swipe_on_mobile": false
       }
+    },
+    "hero-one": {
+      "type": "hero-one",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Name of Store",
+            "font-size": 55
+          }
+        },
+        "paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "hero_text": "Beard kickstarter affogato biodiesel jianbing. Tbh humblebrag truck cornhole."
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "View More",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "paragraph",
+        "button"
+      ],
+      "settings": {
+        "hero_size": "hero1__100vh",
+        "image": "shopify:\/\/shop_images\/Jona.jpg",
+        "hero_alignment": "center",
+        "background_color": "#000000",
+        "opacity": 55
+      }
     }
   },
   "order": [
+    "hero-one",
     "image_banner",
     "rich_text",
     "featured_products",

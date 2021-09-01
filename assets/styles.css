@@ -652,7 +652,6 @@ h1 {
 }
 
 .collection2__collection-item .collection1__product-image {
-    background: #f6f6f6;
     position: relative;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
@@ -761,8 +760,8 @@ h1 {
 }
 
 .collection1__collection-item .collection1__product-image {
+    background: #eeeaea;
     position: relative;
-    background: #f6f6f6;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out
@@ -801,7 +800,7 @@ h1 {
     visibility: visible
 }
 
-.collection1__collection-item .collection1__product-image .collection1__heart {
+.collection1__collection-item .collection1__heart {
     position: absolute;
     top: 0;
     right: 0;
@@ -816,7 +815,7 @@ h1 {
     z-index: 3
 }
 
-.collection1__collection-item .collection1__product-image .collection1__heart:hover {
+.collection1__collection-item .collection1__heart:hover {
     color: #fb6f92;
     -webkit-transform: scale(1.2);
     -moz-transform: scale(1.2);
@@ -8371,4 +8370,20 @@ body {
 
 .transparent-fixed a {
     color: white;
+}
+
+.circle {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+
+}
+
+.square {
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    margin: 0 auto;
 }
