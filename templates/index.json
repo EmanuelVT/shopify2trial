@@ -6,15 +6,15 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "title": "-25% OFF for EARTH DAY",
-            "font_size": 55
+            "title": "25% OFF for EARTH DAY",
+            "font_size": 63
           }
         },
         "button": {
           "type": "button",
           "settings": {
-            "button_label": "View More",
-            "button_link": ""
+            "button_label": "Check out",
+            "button_link": "shopify:\/\/collections\/asics-tiger"
           }
         }
       },
@@ -30,25 +30,75 @@
         "opacity": 55
       }
     },
-    "1630532781a84368df": {
+    "1630533333950f8243": {
       "type": "collection-product-single",
       "settings": {
-        "product_display": 6,
+        "product_display": 3,
         "xl_devices": "col-xl-4",
         "lg_devices": "col-lg-4",
         "md_devices": "col-md-4",
         "sm_devices": "col-sm-6",
         "collection": "adidas",
         "image_fit": "contain",
+        "product_shape": "circle",
+        "background_color": "#ffffff",
+        "show_product_title": true,
+        "show_product_price": true
+      }
+    },
+    "163053342959f77e92": {
+      "type": "collection-product-single",
+      "settings": {
+        "product_display": 4,
+        "xl_devices": "col-xl-3",
+        "lg_devices": "col-lg-4",
+        "md_devices": "col-md-4",
+        "sm_devices": "col-sm-6",
+        "collection": "men",
+        "image_fit": "contain",
         "product_shape": "rectangular",
         "background_color": "#ffffff",
         "show_product_title": true,
         "show_product_price": true
       }
+    },
+    "16305335303c365aad": {
+      "type": "hero-two",
+      "blocks": {
+        "16305335303c365aad-0": {
+          "type": "button-left",
+          "settings": {
+            "button_label": "View More",
+            "button_link": ""
+          }
+        },
+        "16305335303c365aad-1": {
+          "type": "button-right",
+          "settings": {
+            "button_label": "View More",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "16305335303c365aad-0",
+        "16305335303c365aad-1"
+      ],
+      "settings": {
+        "hero_size": "hero2__100vh",
+        "image": "shopify:\/\/shop_images\/model-with-leather-jacket-over-shoulders.jpg",
+        "background_color_img1": "#56ace6",
+        "opacity_img1": 50,
+        "image_two": "shopify:\/\/shop_images\/bright-modern-mens-fashion.jpg",
+        "background_color_img2": "#000000",
+        "opacity_img2": 50
+      }
     }
   },
   "order": [
     "hero-one",
-    "1630532781a84368df"
+    "1630533333950f8243",
+    "163053342959f77e92",
+    "16305335303c365aad"
   ]
 }
