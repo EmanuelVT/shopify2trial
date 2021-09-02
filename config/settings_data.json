@@ -37,7 +37,6 @@
           "logo_position": "middle-left",
           "menu": "main-menu",
           "menu2": "main-menu",
-          "enable_sticky_header": false,
           "header_background": "transparent"
         }
       },
