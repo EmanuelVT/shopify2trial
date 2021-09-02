@@ -93,12 +93,59 @@
         "background_color_img2": "#000000",
         "opacity_img2": 50
       }
+    },
+    "163060091455ba3d9f": {
+      "type": "collection-group",
+      "blocks": {
+        "163060091455ba3d9f-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "adidas"
+          }
+        },
+        "163060091455ba3d9f-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "nike"
+          }
+        },
+        "163060091455ba3d9f-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "converse"
+          }
+        },
+        "163060091455ba3d9f-3": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "flex-fit"
+          }
+        }
+      },
+      "block_order": [
+        "163060091455ba3d9f-0",
+        "163060091455ba3d9f-1",
+        "163060091455ba3d9f-2",
+        "163060091455ba3d9f-3"
+      ],
+      "settings": {
+        "product_display": 4,
+        "xl_devices": "col-xl-3",
+        "lg_devices": "col-lg-4",
+        "md_devices": "col-md-3",
+        "sm_devices": "col-sm-6",
+        "image_fit": "contain",
+        "product_shape": "square",
+        "background_color": "#ffffff",
+        "show_product_title": true
+      }
     }
   },
   "order": [
     "hero-one",
     "1630533333950f8243",
     "163053342959f77e92",
-    "16305335303c365aad"
+    "16305335303c365aad",
+    "163060091455ba3d9f"
   ]
 }
