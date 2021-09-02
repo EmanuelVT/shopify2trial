@@ -1,8 +1,8 @@
 {% case section.settings.header_type%}
 {% when 'header1' %}
-<header class="{%-if section.settings.enable_sticky_header == false and section.settings.header_background == "transparent" -%}header header1 transparent-static
-{% elsif section.settings.enable_sticky_header == true and section.settings.header_background == "white" %} header header1 white-fixed
-{% elsif section.settings.enable_sticky_header == true and section.settings.header_background == "transparent" %} header header1 transparent-fixed
+<header class="{%-if section.settings.sticky == false and section.settings.header_background == "transparent" -%}header header1 transparent-static
+{% elsif section.settings.sticky == true and section.settings.header_background == "white" %} header header1 white-fixed
+{% elsif section.settings.sticky == true and section.settings.header_background == "transparent" %} header header1 transparent-fixed
 {% else %}
 header header1
 {% endif %}">
@@ -83,9 +83,9 @@ header header1
 </header>
 
 {% when 'header2' %}
-<header class="{%-if section.settings.enable_sticky_header == false and section.settings.header_background == "transparent" -%}header header2 transparent-static
-{% elsif section.settings.enable_sticky_header == true and section.settings.header_background == "white" %} header header2 white-fixed
-{% elsif section.settings.enable_sticky_header == true and section.settings.header_background == "transparent" %} header header2 transparent-fixed
+<header class="{%-if section.settings.sticky == false and section.settings.header_background == "transparent" -%}header header2 transparent-static
+{% elsif section.settings.sticky== true and section.settings.header_background == "white" %} header header2 white-fixed
+{% elsif section.settings.sticky== true and section.settings.header_background == "transparent" %} header header2 transparent-fixed
 {% else %}
 header header2
 {% endif %}">
@@ -154,9 +154,9 @@ header header2
 
 {% when 'header3' %}
 
-<header class="{%-if section.settings.enable_sticky_header == false and section.settings.header_background == "transparent" -%}header header3 transparent-static
-    {% elsif section.settings.enable_sticky_header == true and section.settings.header_background == "white" %} header header3 white-fixed
-    {% elsif section.settings.enable_sticky_header == true and section.settings.header_background == "transparent" %} header header3 transparent-fixed
+<header class="{%-if section.settings.sticky == false and section.settings.header_background == "transparent" -%}header header3 transparent-static
+    {% elsif section.settings.sticky == true and section.settings.header_background == "white" %} header header3 white-fixed
+    {% elsif section.settings.sticky == true and section.settings.header_background == "transparent" %} header header3 transparent-fixed
     {% else %}
     header header3
  {% endif %}">
@@ -293,9 +293,8 @@ header header2
 },
 {
 "type": "checkbox",
-"id": "enable_sticky_header",
-"label": "t:sections.header.settings.enable_sticky_header.label",
-"info": "t:sections.header.settings.enable_sticky_header.info",
+"id": "sticky",
+"label": "Sticky header",
 "default": false
 },
 {

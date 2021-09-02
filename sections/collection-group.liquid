@@ -1,14 +1,11 @@
 <div class="collection collection1">
     <div class="container">
         <div class="row">
-            {%- for product in section.settings.collection.products limit: section.settings.product_display -%}
+            {%- for block in section.blocks -%}
 
             <div
                 class="{{ section.settings.xl_devices }} {{ section.settings.lg_devices }} {{ section.settings.md_devices }} {{ section.settings.sm_devices }}">
                 <div class="collection1__collection-item ">
-                    <div class="collection1__heart">
-                        <i class="lni lni-heart"></i>
-                    </div>
                     <div class="collection1__product-image {{section.settings.product_shape}}"
                         style="background:{{section.settings.background_color}}">
 
@@ -16,40 +13,40 @@
 
 
 
-                        {%- if product.images[0] != blank -%}
+                        {%- if block.settings.collection.image != blank -%}
 
                         {%- if section.settings.product_shape == "rectangular" -%}
 
-                        <a href="{{ product.url }}">
+                        <a href="{{ block.settings.collection.url }}">
                             <img class="bg"
-                                srcset="{%- if product.images[0].width >= 165 -%}{{ product.images[0] | img_url: '165x' }} 165w,{%- endif -%}
-                                      {%- if product.images[0].width >= 360 -%}{{ product.images[0] | img_url: '360x' }} 360w,{%- endif -%}
-                                      {%- if product.images[0].width >= 535 -%}{{ product.images[0] | img_url: '535x' }} 535w,{%- endif -%}
-                                      {%- if product.images[0].width >= 750 -%}{{ product.images[0] | img_url: '750x' }} 750w,{%- endif -%}
-                                      {%- if product.images[0].width >= 1070 -%}{{ product.images[0] | img_url: '1070x' }} 1070w,{%- endif -%}
-                                      {%- if product.images[0].width >= 1500 -%}{{ product.images[0] | img_url: '2000x' }} 2000w,{%- endif -%}"
-                                src="{{ product.images[0]}}"
+                                srcset="{%- if block.settings.collection.image.width >= 165 -%}{{ block.settings.collection.image | img_url: '165x' }} 165w,{%- endif -%}
+                                      {%- if block.settings.collection.image.width >= 360 -%}{{ block.settings.collection.image | img_url: '360x' }} 360w,{%- endif -%}
+                                      {%- if block.settings.collection.image.width >= 535 -%}{{ block.settings.collection.image | img_url: '535x' }} 535w,{%- endif -%}
+                                      {%- if block.settings.collection.image.width >= 750 -%}{{ block.settings.collection.image | img_url: '750x' }} 750w,{%- endif -%}
+                                      {%- if block.settings.collection.image.width >= 1070 -%}{{ block.settings.collection.image | img_url: '1070x' }} 1070w,{%- endif -%}
+                                      {%- if block.settings.collection.image.width >= 1500 -%}{{ block.settings.collection.image | img_url: '2000x' }} 2000w,{%- endif -%}"
+                                src="{{ block.settings.collection.image}}"
                                 sizes="(min-width: {{ settings.page_width }}px) 2000px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
-                                alt="{{ product.images[0].alt | escape }}" loading="lazy"
-                                width="{{ product.images[0].width }}" height="{{ product.images[0].height }}"
+                                alt="{{ block.settings.collection.image.alt | escape }}" loading="lazy"
+                                width="{{ block.settings.collection.image.width }}"
+                                height="{{ block.settings.collection.image.height }}"
                                 style="object-fit: {{section.settings.image_fit}};"></a>
                         {%-else-%}
-                        <a href="{{ product.url }}">
+                        <a href="{{ block.settings.collection.url }}">
                             <img class="bg"
-                                srcset="{%- if product.images[0].width >= 165 -%}{{ product.images[0] | img_url: '165x' }} 165w,{%- endif -%}
-                                      {%- if product.images[0].width >= 360 -%}{{ product.images[0] | img_url: '360x' }} 360w,{%- endif -%}
-                                      {%- if product.images[0].width >= 535 -%}{{ product.images[0] | img_url: '535x' }} 535w,{%- endif -%}
-                                      {%- if product.images[0].width >= 750 -%}{{ product.images[0] | img_url: '750x' }} 750w,{%- endif -%}
-                                      {%- if product.images[0].width >= 1070 -%}{{ product.images[0] | img_url: '1070x' }} 1070w,{%- endif -%}
-                                      {%- if product.images[0].width >= 1500 -%}{{ product.images[0] | img_url: '2000x' }} 2000w,{%- endif -%}"
-                                src="{{ product.images[0]}}"
+                                srcset="{%- if block.settings.collection.image.width >= 165 -%}{{ block.settings.collection.image | img_url: '165x' }} 165w,{%- endif -%}
+                                      {%- if block.settings.collection.image.width >= 360 -%}{{ block.settings.collection.image | img_url: '360x' }} 360w,{%- endif -%}
+                                      {%- if block.settings.collection.image.width >= 535 -%}{{ block.settings.collection.image | img_url: '535x' }} 535w,{%- endif -%}
+                                      {%- if block.settings.collection.image.width >= 750 -%}{{ block.settings.collection.image | img_url: '750x' }} 750w,{%- endif -%}
+                                      {%- if block.settings.collection.image.width >= 1070 -%}{{ block.settings.collection.image | img_url: '1070x' }} 1070w,{%- endif -%}
+                                      {%- if block.settings.collection.image.width >= 1500 -%}{{ block.settings.collection.image | img_url: '2000x' }} 2000w,{%- endif -%}"
+                                src="{{ block.settings.collection.image}}"
                                 sizes="(min-width: {{ settings.page_width }}px) 2000px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
-                                alt="{{ product.images[0].alt | escape }}" loading="lazy" width="400" height="190"
-                                style="object-fit: {{section.settings.image_fit}};"></a>
+                                alt="{{ block.settings.collection.image.alt | escape }}" loading="lazy" width="400"
+                                height="190" style="object-fit: {{section.settings.image_fit}};"></a>
                         {%- endif- %}
                         {%- else -%}
-                        <img src="https://images.pexels.com/photos/4814633/pexels-photo-4814633.jpeg?cs=srgb&dl=pexels-jonaorle-4814633.jpg&fm=jpg"
-                            class="bg">
+                        {{'image' | placeholder_svg_tag: 'placeholder-svg'}}
 
                         {%- endif -%}
 
@@ -62,11 +59,11 @@
 
                     </div>
 
-                    <div class="collection1__product-info" style="margin-bottom:60px;">
+                    <div class="collection1__product-info" style="margin-bottom:60px; text-align:center;">
                         {%- if section.settings.show_product_title == true -%}
                         <div class="collection1__product-details">
-                            <span class="collection1__product-title"><a href="{{ product.url }}"
-                                    style="text-decoration: none; color: black;">{{product.title}}</a></span>
+                            <span class="collection1__product-title"><a href="{{ block.settings.collection.url }}"
+                                    style="text-decoration: none; color: black;">{{block.settings.collection.title}}</a></span>
                         </div>
                         {%- endif -%}
 
@@ -99,18 +96,18 @@
 <div class="hero hero1 aligned-{{section.settings.hero_alignment}} {{section.settings.hero_size}}">
 
 
-    {%- if product.images[0] != blank -%}
+    {%- if block.settings.collection.image != blank -%}
     <img class="bg"
-        srcset="{%- if product.images[0].width >= 165 -%}{{ product.images[0] | img_url: '165x' }} 165w,{%- endif -%}
-                  {%- if product.images[0].width >= 360 -%}{{ product.images[0] | img_url: '360x' }} 360w,{%- endif -%}
-                  {%- if product.images[0].width >= 535 -%}{{ product.images[0] | img_url: '535x' }} 535w,{%- endif -%}
-                  {%- if product.images[0].width >= 750 -%}{{ product.images[0] | img_url: '750x' }} 750w,{%- endif -%}
-                  {%- if product.images[0].width >= 1070 -%}{{ product.images[0] | img_url: '1070x' }} 1070w,{%- endif -%}
-                  {%- if product.images[0].width >= 1500 -%}{{ product.images[0] | img_url: '2000x' }} 2000w,{%- endif -%}"
-        src="{{ product.images[0] | img_url: '1500x' }}"
+        srcset="{%- if block.settings.collection.image.width >= 165 -%}{{ block.settings.collection.image | img_url: '165x' }} 165w,{%- endif -%}
+                  {%- if block.settings.collection.image.width >= 360 -%}{{ block.settings.collection.image | img_url: '360x' }} 360w,{%- endif -%}
+                  {%- if block.settings.collection.image.width >= 535 -%}{{ block.settings.collection.image | img_url: '535x' }} 535w,{%- endif -%}
+                  {%- if block.settings.collection.image.width >= 750 -%}{{ block.settings.collection.image | img_url: '750x' }} 750w,{%- endif -%}
+                  {%- if block.settings.collection.image.width >= 1070 -%}{{ block.settings.collection.image | img_url: '1070x' }} 1070w,{%- endif -%}
+                  {%- if block.settings.collection.image.width >= 1500 -%}{{ block.settings.collection.image | img_url: '2000x' }} 2000w,{%- endif -%}"
+        src="{{ block.settings.collection.image | img_url: '1500x' }}"
         sizes="(min-width: {{ settings.page_width }}px) 2000px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
-        alt="{{ product.images[0].alt | escape }}" loading="lazy" width="{{ product.images[0].width }}"
-        height="{{ product.images[0].height }}">
+        alt="{{ block.settings.collection.image.alt | escape }}" loading="lazy" width="{{ block.settings.collection.image.width }}"
+        height="{{ block.settings.collection.image.height }}">
     {%- else -%}
     <img src="https://images.pexels.com/photos/4814633/pexels-photo-4814633.jpeg?cs=srgb&dl=pexels-jonaorle-4814633.jpg&fm=jpg"
         class="bg">
@@ -156,7 +153,7 @@
 
 {% schema %}
 {
-"name": "Collection Product Single",
+"name": "Collection Group",
 "class": "spaced-section spaced-section--full-width",
 "settings": [
 {
@@ -265,11 +262,6 @@
 "label": "Small Devices"
 },
 {
-"type": "collection",
-"id": "collection",
-"label": "Featured collection"
-},
-{
 "type": "select",
 "id": "image_fit",
 "options": [
@@ -302,7 +294,7 @@
 "label": "Square"
 }
 ],
-"default": "rectangular",
+"default": "square",
 "label": "Shape of Product"
 },
 {
@@ -316,16 +308,46 @@
 "id": "show_product_title",
 "label": "Show title",
 "default": true
-},
+}
+],
+"blocks": [
 {
-"type": "checkbox",
-"id": "show_product_price",
-"label": "Show price",
-"default": true
+"type": "featured_collection",
+"name": "t:sections.collection-list.blocks.featured_collection.name",
+"settings": [
+{
+"type": "collection",
+"id": "collection",
+"label": "t:sections.collection-list.blocks.featured_collection.settings.collection.label"
+}
+]
 }
 ],
 "presets": [{
-"name": "Collection Products 1"
+"name": "Collection Group",
+"settings":
+{
+"background_color": "#FFFFFF",
+"xl_devices": "col-xl-3",
+"lg_devices": "col-lg-4",
+"md_devices" : "col-md-3",
+"sm_devices": "col-sm-6"
+}
+,
+"blocks": [
+{
+"type": "featured_collection"
+},
+{
+"type": "featured_collection"
+},
+{
+"type": "featured_collection"
+},
+{
+"type": "featured_collection"
+}
+]
 }]
 }
 {% endschema %}
