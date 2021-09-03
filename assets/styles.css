@@ -750,6 +750,11 @@ h1 {
     background: #ff0
 }
 
+.collection1__collection-item .collection1__colors.white {
+    background: white;
+    border: 1px solid black;
+}
+
 .collection1 {
     margin: 50px
 }
