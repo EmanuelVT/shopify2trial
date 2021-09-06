@@ -1,132 +1,74 @@
 {
   "sections": {
-    "hero-one": {
+    "16309470075501d4c4": {
       "type": "hero-one",
       "blocks": {
-        "heading": {
+        "1630947007de2d8182-0": {
           "type": "heading",
           "settings": {
-            "title": "25% OFF for EARTH DAY",
-            "font_size": 63
+            "title": "Title",
+            "font_size": 55
           }
         },
-        "button": {
+        "1630947007de2d8182-1": {
+          "type": "paragraph",
+          "settings": {
+            "hero_text": "Beard kickstarter affogato biodiesel jianbing. Tbh humblebrag truck cornhole."
+          }
+        },
+        "1630947007de2d8182-2": {
           "type": "button",
           "settings": {
-            "button_label": "Check out",
-            "button_link": "shopify:\/\/collections\/asics-tiger"
+            "button_label": "View More",
+            "button_link": ""
           }
         }
       },
       "block_order": [
-        "heading",
-        "button"
+        "1630947007de2d8182-0",
+        "1630947007de2d8182-1",
+        "1630947007de2d8182-2"
       ],
       "settings": {
         "hero_size": "hero1__100vh",
-        "image": "shopify:\/\/shop_images\/thick-lush-green-forest.jpg",
         "hero_alignment": "center",
         "background_color": "#000000",
-        "opacity": 55
+        "opacity": 50
       }
     },
-    "1630533333950f8243": {
-      "type": "collection-product-single",
-      "settings": {
-        "product_display": 3,
-        "xl_devices": "col-xl-4",
-        "lg_devices": "col-lg-4",
-        "md_devices": "col-md-4",
-        "sm_devices": "col-sm-6",
-        "collection": "adidas",
-        "image_fit": "contain",
-        "product_shape": "circle",
-        "background_color": "#ffffff",
-        "show_product_title": true,
-        "show_product_price": true
-      }
-    },
-    "163053342959f77e92": {
-      "type": "collection-product-single",
-      "settings": {
-        "product_display": 4,
-        "xl_devices": "col-xl-3",
-        "lg_devices": "col-lg-4",
-        "md_devices": "col-md-4",
-        "sm_devices": "col-sm-6",
-        "collection": "men",
-        "image_fit": "contain",
-        "product_shape": "rectangular",
-        "background_color": "#ffffff",
-        "show_product_title": true,
-        "show_product_price": true
-      }
-    },
-    "16305335303c365aad": {
-      "type": "hero-two",
-      "blocks": {
-        "16305335303c365aad-0": {
-          "type": "button-left",
-          "settings": {
-            "button_label": "View More",
-            "button_link": ""
-          }
-        },
-        "16305335303c365aad-1": {
-          "type": "button-right",
-          "settings": {
-            "button_label": "View More",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "16305335303c365aad-0",
-        "16305335303c365aad-1"
-      ],
-      "settings": {
-        "hero_size": "hero2__100vh",
-        "image": "shopify:\/\/shop_images\/model-with-leather-jacket-over-shoulders.jpg",
-        "background_color_img1": "#56ace6",
-        "opacity_img1": 50,
-        "image_two": "shopify:\/\/shop_images\/bright-modern-mens-fashion.jpg",
-        "background_color_img2": "#000000",
-        "opacity_img2": 50
-      }
-    },
-    "163060091455ba3d9f": {
+    "1630947072068eec29": {
       "type": "collection-group",
       "blocks": {
-        "163060091455ba3d9f-0": {
+        "1630947072670063e9-0": {
           "type": "featured_collection",
           "settings": {
-            "collection": "adidas"
+            "collection": ""
           }
         },
-        "163060091455ba3d9f-1": {
+        "1630947072670063e9-1": {
           "type": "featured_collection",
           "settings": {
-            "collection": "nike"
+            "collection": ""
           }
         },
-        "163060091455ba3d9f-2": {
+        "1630947072670063e9-2": {
           "type": "featured_collection",
           "settings": {
-            "collection": "converse"
+            "collection": ""
           }
         },
-        "163060091455ba3d9f-3": {
+        "1630947072670063e9-3": {
           "type": "featured_collection",
           "settings": {
-            "collection": "flex-fit"
+            "collection": ""
           }
         }
       },
       "block_order": [
-        "163060091455ba3d9f-0",
-        "163060091455ba3d9f-1",
-        "163060091455ba3d9f-2",
-        "163060091455ba3d9f-3"
+        "1630947072670063e9-0",
+        "1630947072670063e9-1",
+        "1630947072670063e9-2",
+        "1630947072670063e9-3"
       ],
       "settings": {
         "product_display": 4,
@@ -139,13 +81,126 @@
         "background_color": "#ffffff",
         "show_product_title": true
       }
+    },
+    "1630947031f62c5578": {
+      "type": "hero-two",
+      "blocks": {
+        "163094703113bb5e1e-0": {
+          "type": "button-left",
+          "settings": {
+            "button_label": "View More",
+            "button_link": ""
+          }
+        },
+        "163094703113bb5e1e-1": {
+          "type": "button-right",
+          "settings": {
+            "button_label": "View More",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "163094703113bb5e1e-0",
+        "163094703113bb5e1e-1"
+      ],
+      "settings": {
+        "hero_size": "hero2__50vh",
+        "background_color_img1": "#000000",
+        "opacity_img1": 50,
+        "background_color_img2": "#000000",
+        "opacity_img2": 50
+      }
+    },
+    "1630947044ed79a24a": {
+      "type": "collection-product-single",
+      "settings": {
+        "product_display": 4,
+        "xl_devices": "col-xl-4",
+        "lg_devices": "col-lg-4",
+        "md_devices": "col-md-4",
+        "sm_devices": "col-sm-6",
+        "collection": "",
+        "image_fit": "contain",
+        "product_shape": "rectangular",
+        "background_color": "#EEEAEA",
+        "show_product_title": true,
+        "show_product_price": true
+      }
+    },
+    "163094711101132932": {
+      "type": "hero-one",
+      "blocks": {
+        "163094711131046da3-0": {
+          "type": "heading",
+          "settings": {
+            "title": "Title",
+            "font_size": 55
+          }
+        },
+        "163094711131046da3-1": {
+          "type": "paragraph",
+          "settings": {
+            "hero_text": "Beard kickstarter affogato biodiesel jianbing. Tbh humblebrag truck cornhole."
+          }
+        },
+        "163094711131046da3-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "View More",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "163094711131046da3-0",
+        "163094711131046da3-1",
+        "163094711131046da3-2"
+      ],
+      "settings": {
+        "hero_size": "hero1__50vh",
+        "hero_alignment": "center",
+        "background_color": "#000000",
+        "opacity": 50
+      }
+    },
+    "163094709146dc77c4": {
+      "type": "hero-two",
+      "blocks": {
+        "163094709104bcc238-0": {
+          "type": "button-left",
+          "settings": {
+            "button_label": "View More",
+            "button_link": ""
+          }
+        },
+        "163094709104bcc238-1": {
+          "type": "button-right",
+          "settings": {
+            "button_label": "View More",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "163094709104bcc238-0",
+        "163094709104bcc238-1"
+      ],
+      "settings": {
+        "hero_size": "hero2__50vh",
+        "background_color_img1": "#000000",
+        "opacity_img1": 50,
+        "background_color_img2": "#000000",
+        "opacity_img2": 50
+      }
     }
   },
   "order": [
-    "hero-one",
-    "1630533333950f8243",
-    "163053342959f77e92",
-    "163060091455ba3d9f",
-    "16305335303c365aad"
+    "16309470075501d4c4",
+    "1630947072068eec29",
+    "1630947031f62c5578",
+    "1630947044ed79a24a",
+    "163094711101132932",
+    "163094709146dc77c4"
   ]
 }
