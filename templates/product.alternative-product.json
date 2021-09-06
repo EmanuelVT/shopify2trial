@@ -29,7 +29,9 @@
         },
         "variant_picker": {
           "type": "variant_picker",
+          "disabled": true,
           "settings": {
+            "picker_type": "button"
           }
         },
         "quantity_selector": {
@@ -40,16 +42,20 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
+            "show_dynamic_checkout": true
           }
         },
         "description": {
           "type": "description",
+          "disabled": true,
           "settings": {
           }
         },
         "share": {
           "type": "share",
+          "disabled": true,
           "settings": {
+            "share_label": "Share"
           }
         }
       },
@@ -65,16 +71,67 @@
         "share"
       ],
       "settings": {
+        "enable_sticky_info": true,
+        "hide_variants": false,
+        "enable_video_looping": false
+      }
+    },
+    "163093962452c6eb95": {
+      "type": "collection-display",
+      "blocks": {
+        "16309396247ae1ecbc-0": {
+          "type": "featured_product",
+          "settings": {
+            "featured_product": "adidas-classic-backpack-legend-ink-multicolour"
+          }
+        },
+        "16309396247ae1ecbc-1": {
+          "type": "featured_product",
+          "settings": {
+            "featured_product": "adidas-kids-stan-smith"
+          }
+        },
+        "16309396247ae1ecbc-2": {
+          "type": "featured_product",
+          "settings": {
+            "featured_product": "dr-martens-1460z-dmc-8-eye-boot-cherry-smooth"
+          }
+        }
+      },
+      "block_order": [
+        "16309396247ae1ecbc-0",
+        "16309396247ae1ecbc-1",
+        "16309396247ae1ecbc-2"
+      ],
+      "settings": {
+        "featured_title": "Featured Products",
+        "xl_devices": "col-xl-4",
+        "lg_devices": "col-lg-4",
+        "md_devices": "col-md-4",
+        "sm_devices": "col-sm-6",
+        "image_fit": "contain",
+        "product_shape": "rectangular",
+        "background_color": "#FFFFFF",
+        "show_product_title": true,
+        "show_product_price": true
       }
     },
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
+        "heading": "You may also like",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_image_outline": true,
+        "show_vendor": false,
+        "show_rating": false
       }
     }
   },
   "order": [
     "main",
+    "163093962452c6eb95",
     "product-recommendations"
   ]
 }
