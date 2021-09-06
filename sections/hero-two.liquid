@@ -81,6 +81,37 @@
 
 </div>
 
+{% javascript %}
+class HeroTwo extends HTMLElement {
+constructor() {
+super();
+
+const handleIntersection = (entries, observer) => {
+if (!entries[0].isIntersecting) return;
+observer.unobserve(this);
+
+fetch(this.dataset.url)
+.then(response => response.text())
+.then(text => {
+const html = document.createElement('div');
+html.innerHTML = text;
+const herotwo = html.querySelector('hero-two');
+if (herotwo && herotwo.innerHTML.trim().length) {
+this.innerHTML = herotwo.innerHTML;
+}
+})
+.catch(e => {
+console.error(e);
+});
+}
+
+new IntersectionObserver(handleIntersection.bind(this), {rootMargin: '0px 0px 200px 0px'}).observe(this);
+}
+}
+
+customElements.define('hero-two', herotwo);
+{% endjavascript %}
+
 
 
 
