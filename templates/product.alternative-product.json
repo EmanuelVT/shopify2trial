@@ -76,6 +76,36 @@
         "enable_video_looping": false
       }
     },
+    "163093983549af185e": {
+      "type": "hero-two",
+      "blocks": {
+        "1630939835fd96180f-0": {
+          "type": "button-left",
+          "settings": {
+            "button_label": "View More",
+            "button_link": ""
+          }
+        },
+        "1630939835fd96180f-1": {
+          "type": "button-right",
+          "settings": {
+            "button_label": "View More",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1630939835fd96180f-0",
+        "1630939835fd96180f-1"
+      ],
+      "settings": {
+        "hero_size": "hero2__50vh",
+        "background_color_img1": "#000000",
+        "opacity_img1": 50,
+        "background_color_img2": "#000000",
+        "opacity_img2": 50
+      }
+    },
     "163093962452c6eb95": {
       "type": "collection-display",
       "blocks": {
@@ -111,7 +141,7 @@
         "sm_devices": "col-sm-6",
         "image_fit": "contain",
         "product_shape": "rectangular",
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "show_product_title": true,
         "show_product_price": true
       }
@@ -131,6 +161,7 @@
   },
   "order": [
     "main",
+    "163093983549af185e",
     "163093962452c6eb95",
     "product-recommendations"
   ]
