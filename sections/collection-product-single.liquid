@@ -1,3 +1,4 @@
+{% if section.settings.collection.all_products_count %}
 <div class="collection collection1">
     <div class="container">
         <div class="row">
@@ -95,63 +96,131 @@
 
 </div>
 
-<!--
-<div class="hero hero1 aligned-{{section.settings.hero_alignment}} {{section.settings.hero_size}}">
+{% else %}
+
+<div class="collection collection1">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="collection1__collection-item">
+                    <div class="collection1__product-image">
+                        <div class="collection1__heart">
+                            <i class="lni lni-heart"></i>
+                        </div>
+                        {{ 'product-1' | placeholder_svg_tag }}
 
 
-    {%- if product.images[0] != blank -%}
-    <img class="bg"
-        srcset="{%- if product.images[0].width >= 165 -%}{{ product.images[0] | img_url: '165x' }} 165w,{%- endif -%}
-                  {%- if product.images[0].width >= 360 -%}{{ product.images[0] | img_url: '360x' }} 360w,{%- endif -%}
-                  {%- if product.images[0].width >= 535 -%}{{ product.images[0] | img_url: '535x' }} 535w,{%- endif -%}
-                  {%- if product.images[0].width >= 750 -%}{{ product.images[0] | img_url: '750x' }} 750w,{%- endif -%}
-                  {%- if product.images[0].width >= 1070 -%}{{ product.images[0] | img_url: '1070x' }} 1070w,{%- endif -%}
-                  {%- if product.images[0].width >= 1500 -%}{{ product.images[0] | img_url: '2000x' }} 2000w,{%- endif -%}"
-        src="{{ product.images[0] | img_url: '1500x' }}"
-        sizes="(min-width: {{ settings.page_width }}px) 2000px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
-        alt="{{ product.images[0].alt | escape }}" loading="lazy" width="{{ product.images[0].width }}"
-        height="{{ product.images[0].height }}">
-    {%- else -%}
-    <img src="https://images.pexels.com/photos/4814633/pexels-photo-4814633.jpeg?cs=srgb&dl=pexels-jonaorle-4814633.jpg&fm=jpg"
-        class="bg">
+                    </div>
+                    <div class="collection1__product-info">
+                        <div class="collection1__product-details">
+                            <span class="collection1__product-title">Product</span>
+                        </div>
 
-    {%- endif -%}
+                        <span class="collection1__product-price">
+                            $33.99 USD
+                        </span>
 
-    {% assign opacity = section.settings.opacity | divided_by: 100.00%}
+                        <a href="#">
+                            <div class="collection1__colors red"></div>
+                        </a>
+                    </div>
+                </div>
 
-    <div class="hero1__content-container"
-        style="background: {{ section.settings.background_color | color_modify: 'alpha', opacity }}">
-        <div class="hero1__info">
+            </div>
+            <div class="col-md-3">
+                <div class="collection1__collection-item">
+                    <div class="collection1__product-image">
+                        <div class="collection1__heart">
+                            <i class="lni lni-heart"></i>
+                        </div>
+                        {{ 'product-1' | placeholder_svg_tag }}
 
-            {%- for block in section.blocks -%}
-            {% case block.type %}
-            {%- when 'heading' -%}
-            <h1 class="hero1__title" style="font-size:{{block.settings.font_size}}px;">{{block.settings.title | escape}}
-            </h1>
-            <h2 class="image-with-text__heading h1" {{ block.shopify_attributes }}>
-                {{ block.settings.heading | escape }}
-            </h2>
-            {%- when 'paragraph' -%}
-            <p class="hero1__paragraph">{{block.settings.hero_text}}</p>
-            <div class="image-with-text__text rte" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
-            {%- when 'button' -%}
-            {%- if block.settings.button_label != blank -%}
-            <a href="{{block.settings.button_link}}" target="_blank" class="hero1__button"
-                {% if block.settings.button_link == blank %} aria-disabled="true" {% endif %}
-                {{ block.shopify_attributes }}>
-                {{ block.settings.button_label | escape }}
-            </a>
-            {%- endif -%}
-            {%- endcase -%}
-            {%- endfor -%}
+
+                    </div>
+
+                    <div class="collection1__product-info">
+                        <div class="collection1__product-details">
+                            <span class="collection1__product-title">Product</span>
+                        </div>
+
+                        <span class="collection1__product-price">
+                            $47.99 USD
+                        </span>
+
+                        <div class="collection1__product-colors">
+                            <a href="#">
+                                <div class="collection1__colors denim-blue"></div>
+                            </a>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-md-3">
+                <div class="collection1__collection-item">
+                    <div class="collection1__product-image">
+                        <div class="collection1__heart">
+                            <i class="lni lni-heart"></i>
+                        </div>
+                        {{ 'product-1' | placeholder_svg_tag }}
+
+
+                    </div>
+                    <div class="collection1__product-info">
+                        <div class="collection1__product-details">
+                            <span class="collection1__product-title">Product</span>
+                        </div>
+
+                        <span class="collection1__product-price">
+                            $27.99 USD
+                        </span>
+
+                        <a href="#">
+                            <div class="collection1__colors blue"></div>
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-md-3">
+                <div class="collection1__collection-item">
+                    <div class="collection1__product-image">
+                        <div class="collection1__heart">
+                            <i class="lni lni-heart"></i>
+                        </div>
+                        {{ 'product-1' | placeholder_svg_tag }}
+                    </div>
+                    <div class="collection1__product-info">
+                        <div class="collection1__product-details">
+                            <span class="collection1__product-title">Product</span>
+                        </div>
+
+                        <span class="collection1__product-price">
+                            $34.99 USD
+                        </span>
+
+                        <a href="#">
+                            <div class="collection1__colors blue"></div>
+                        </a>
+                    </div>
+                </div>
+
+
+
+            </div>
 
 
         </div>
     </div>
 
 
-</div>-->
+</div>
 
+{% endif %}
 
 
 {% schema %}
