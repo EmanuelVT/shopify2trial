@@ -1,3 +1,5 @@
+{{ 'Hero1.css' | asset_url | stylesheet_tag }}
+
 <div class="hero hero1 aligned-{{section.settings.hero_alignment}} {{section.settings.hero_size}}">
 
 
@@ -14,12 +16,29 @@
         alt="{{ section.settings.image.alt | escape }}" loading="lazy" width="{{ section.settings.image.width }}"
         height="{{ section.settings.image.height }}">
     {%- else -%}
-    <img src="https://images.pexels.com/photos/4814633/pexels-photo-4814633.jpeg?cs=srgb&dl=pexels-jonaorle-4814633.jpg&fm=jpg"
-        class="bg">
+
+    {{ 'image' | placeholder_svg_tag: 'placeholder-style' }}
+
+
 
     {%- endif -%}
 
     {% assign opacity = section.settings.opacity | divided_by: 100.00%}
+
+    {% style %}
+
+    .hero1__button{
+    background: {{settings.button_bg}};
+    color: {{settings.button_font_color}};
+    border-color: {{settings.button_border_color}};
+    }
+
+    .hero1__button:hover {
+    background: {{settings.button_bg_hover}};
+    color: {{settings.button_font_color_hover}}
+    }
+
+    {% endstyle %}
 
     <div class="hero1__content-container"
         style="background: {{ section.settings.background_color | color_modify: 'alpha', opacity }}">

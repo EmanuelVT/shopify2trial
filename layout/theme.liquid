@@ -37,6 +37,9 @@
       assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
     %}
 
+
+
+
   {% style %}
   {{ settings.type_body_font | font_face: font_display: 'swap' }}
   {{ body_font_bold | font_face: font_display: 'swap' }}
@@ -45,11 +48,11 @@
   {{ settings.type_header_font | font_face: font_display: 'swap' }}
 
   :root {
-  --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+  --font-body-family: {{ settings.type_body_font }}, {{ settings.type_body_font.fallback_families }};
   --font-body-style: {{ settings.type_body_font.style }};
   --font-body-weight: {{ settings.type_body_font.weight }};
 
-  --font-heading-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
+  --font-heading-family: {{ settings.type_header_font }}, {{ settings.type_header_font.fallback_families }};
   --font-heading-style: {{ settings.type_header_font.style }};
   --font-heading-weight: {{ settings.type_header_font.weight }};
 
@@ -117,7 +120,39 @@
   </link>
 
   {{ 'base.css' | asset_url | stylesheet_tag }}
-  {{ 'styles.css' | asset_url | stylesheet_tag }}
+  {{ 'vendors.css' | asset_url | stylesheet_tag }}
+
+  {% style %}
+  :root {
+  --body-bg: {{settings.body_bg}}
+  }
+
+  body {
+  background-color: var(--body-bg);
+  }
+
+  p{
+  font-family: var(--font-body-family)
+  }
+
+  h1{
+  font-family: var(--font-heading-family)!important
+  }
+
+  .fixed-nav.nav-transparent .header {
+  background: transparent
+  }
+
+  .fixed-nav.nav-transparent .header a {
+  color: #fff
+  }
+
+  .fixed-nav .header {
+  position: fixed;
+  width: 100%;
+  z-index: 20
+  }
+  {% endstyle %}
 
   {%- unless settings.type_body_font.system? -%}
   <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
@@ -131,7 +166,7 @@
   </script>
 </head>
 
-<body style="overflow-x: hidden;">
+<body style="overflow-x: hidden;" style="background: var(--body-bg)">
   <a class="skip-to-content-link button visually-hidden" href="#MainContent">
     {{ "accessibility.skip_to_text" | t }}
   </a>
@@ -142,6 +177,8 @@
   <main>
     {{ content_for_layout }}
   </main>
+
+
 
   {% section 'footer' %}
 

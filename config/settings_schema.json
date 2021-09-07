@@ -8,18 +8,62 @@
     "theme_support_url": "https://support.shopify.com/"
   },
   {
+    "name": "Button Settings",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Button Settings"
+      },
+      {
+        "type": "color",
+        "id": "button_bg",
+        "default": "transparent",
+        "label": "Color background",
+        "info": "This is the background color for all the buttons in the site"
+      },
+      {
+        "type": "color",
+        "id": "button_font_color",
+        "default": "#ffffff",
+        "label": "Button Font Color",
+        "info": "This is the font color for all the buttons in the site"
+      },
+      {
+        "type": "color",
+        "id": "button_border_color",
+        "default": "#ffffff",
+        "label": "Button Border Color",
+        "info": "This is the border color for all the buttons in the site"
+      },
+      {
+        "type": "color",
+        "id": "button_bg_hover",
+        "default": "#ffffff",
+        "label": "Background Color when Hovered",
+        "info": "This is the background color of all the buttons when hovered"
+      },
+      {
+        "type": "color",
+        "id": "button_font_color_hover",
+        "default": "#000000",
+        "label": "Background Font Color when Hovered",
+        "info": "This is the font color of all the buttons when hovered"
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.colors.name",
     "settings": [
       {
         "type": "header",
-        "content": "t:settings_schema.colors.settings.header__1.content"
+        "content": "Global Styles"
       },
       {
         "type": "color",
-        "id": "colors_solid_button_labels",
-        "default": "#FFFFFF",
-        "label": "t:settings_schema.colors.settings.colors_solid_button_labels.label",
-        "info": "t:settings_schema.colors.settings.colors_solid_button_labels.info"
+        "id": "body_bg",
+        "default": "#f7f9fd",
+        "label": "Body Background",
+        "info": "This is the background color for the whole site"
       },
       {
         "type": "color",

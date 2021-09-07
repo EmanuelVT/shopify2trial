@@ -1,3 +1,19 @@
+{{ 'Hero2.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+
+.hero2__button{
+background: {{settings.button_bg}};
+color: {{settings.button_font_color}};
+border-color: {{settings.button_border_color}};
+}
+
+.hero2__button:hover {
+background: {{settings.button_bg_hover}};
+color: {{settings.button_font_color_hover}}
+}
+{% endstyle %}
+
 <div class="hero hero2 aligned-right {{section.settings.hero_size}}">
     <div class="hero2__collection1">
         {%- if section.settings.image != blank -%}
@@ -13,8 +29,7 @@
             alt="{{ section.settings.image.alt | escape }}" loading="lazy" width="{{ section.settings.image.width }}"
             height="{{ section.settings.image.height }}">
         {%- else -%}
-        <img src="https://images.pexels.com/photos/3605015/pexels-photo-3605015.jpeg?cs=srgb&dl=pexels-joshua-abner-3605015.jpg&fm=jpg"
-            class="bg"></img>
+        {{ 'image' | placeholder_svg_tag: 'placeholder-style' }}
 
         {%- endif -%}
 
@@ -53,8 +68,7 @@
             alt="{{ section.settings.image_two.alt | escape }}" loading="lazy"
             width="{{ section.settings.image_two.width }}" height="{{ section.settings.image_two.height }}">
         {%- else -%}
-        <img src="https://images.pexels.com/photos/5543421/pexels-photo-5543421.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-            class="bg"></img>
+        {{ 'image' | placeholder_svg_tag: 'placeholder-style' }}
 
         {%- endif -%}
 

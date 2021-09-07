@@ -1,5 +1,6 @@
 {% case section.settings.header_type%}
 {% when 'header1' %}
+{{ 'Header1.css' | asset_url | stylesheet_tag }}
 <header class="{%-if section.settings.sticky == false and section.settings.header_background == "transparent" -%}header header1 transparent-static
 {% elsif section.settings.sticky == true and section.settings.header_background == "white" %} header header1 white-fixed
 {% elsif section.settings.sticky == true and section.settings.header_background == "transparent" %} header header1 transparent-fixed
@@ -83,6 +84,7 @@ header header1
 </header>
 
 {% when 'header2' %}
+{{ 'Header2.css' | asset_url | stylesheet_tag }}
 <header class="{%-if section.settings.sticky == false and section.settings.header_background == "transparent" -%}header header2 transparent-static
 {% elsif section.settings.sticky== true and section.settings.header_background == "white" %} header header2 white-fixed
 {% elsif section.settings.sticky== true and section.settings.header_background == "transparent" %} header header2 transparent-fixed
@@ -153,7 +155,7 @@ header header2
 </header>
 
 {% when 'header3' %}
-
+{{ 'Header3.css' | asset_url | stylesheet_tag }}
 <header class="{%-if section.settings.sticky == false and section.settings.header_background == "transparent" -%}header header3 transparent-static
     {% elsif section.settings.sticky == true and section.settings.header_background == "white" %} header header3 white-fixed
     {% elsif section.settings.sticky == true and section.settings.header_background == "transparent" %} header header3 transparent-fixed
