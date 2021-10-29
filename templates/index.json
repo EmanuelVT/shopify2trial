@@ -31,6 +31,7 @@
       ],
       "settings": {
         "hero_size": "hero1__100vh",
+        "image": "shopify:\/\/shop_images\/Jona.jpg",
         "hero_alignment": "center",
         "background_color": "#000000",
         "opacity": 50
@@ -42,25 +43,25 @@
         "1630947072670063e9-0": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "adidas"
           }
         },
         "1630947072670063e9-1": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "converse"
           }
         },
         "1630947072670063e9-2": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "herschel"
           }
         },
         "1630947072670063e9-3": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "asics-tiger"
           }
         }
       },
@@ -123,7 +124,7 @@
         "collection": "",
         "image_fit": "contain",
         "product_shape": "rectangular",
-        "background_color": "#EEEAEA",
+        "background_color": "#eeeaea",
         "show_product_title": true,
         "show_product_price": true
       }
