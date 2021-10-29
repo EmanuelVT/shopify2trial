@@ -107,6 +107,7 @@
       ],
       "settings": {
         "hero_size": "hero2__50vh",
+        "image": "shopify:\/\/shop_images\/model-with-leather-jacket-over-shoulders.jpg",
         "background_color_img1": "#000000",
         "opacity_img1": 50,
         "background_color_img2": "#000000",
