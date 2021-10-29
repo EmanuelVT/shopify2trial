@@ -37,7 +37,8 @@
           "logo_position": "middle-left",
           "menu": "main-menu",
           "menu2": "main-menu",
-          "header_background": "transparent"
+          "sticky": true,
+          "header_background": "white"
         }
       },
       "footer": {
@@ -65,7 +66,9 @@
         "settings": {
           "newsletter_enable": true,
           "newsletter_heading": "Subscribe to our emails",
-          "show_social": false
+          "footer_message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+          "show_social": false,
+          "footer_bottom_menu": "main-menu"
         }
       }
     },
