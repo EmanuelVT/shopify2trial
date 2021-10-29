@@ -110,6 +110,7 @@
         "image": "shopify:\/\/shop_images\/model-with-leather-jacket-over-shoulders.jpg",
         "background_color_img1": "#000000",
         "opacity_img1": 50,
+        "image_two": "shopify:\/\/shop_images\/bright-modern-mens-fashion.jpg",
         "background_color_img2": "#000000",
         "opacity_img2": 50
       }
