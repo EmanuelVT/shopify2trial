@@ -31,6 +31,7 @@
       ],
       "settings": {
         "hero_size": "hero1__100vh",
+        "image": "shopify:\/\/shop_images\/Jona.jpg",
         "hero_alignment": "center",
         "background_color": "#000000",
         "opacity": 50
@@ -42,25 +43,25 @@
         "1630947072670063e9-0": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "adidas"
           }
         },
         "1630947072670063e9-1": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "converse"
           }
         },
         "1630947072670063e9-2": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "herschel"
           }
         },
         "1630947072670063e9-3": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "asics-tiger"
           }
         }
       },
@@ -106,8 +107,10 @@
       ],
       "settings": {
         "hero_size": "hero2__50vh",
+        "image": "shopify:\/\/shop_images\/model-with-leather-jacket-over-shoulders.jpg",
         "background_color_img1": "#000000",
         "opacity_img1": 50,
+        "image_two": "shopify:\/\/shop_images\/bright-modern-mens-fashion.jpg",
         "background_color_img2": "#000000",
         "opacity_img2": 50
       }
@@ -115,15 +118,15 @@
     "1630947044ed79a24a": {
       "type": "collection-product-single",
       "settings": {
-        "product_display": 4,
-        "xl_devices": "col-xl-4",
+        "product_display": 8,
+        "xl_devices": "col-xl-3",
         "lg_devices": "col-lg-4",
         "md_devices": "col-md-4",
         "sm_devices": "col-sm-6",
-        "collection": "",
-        "image_fit": "contain",
-        "product_shape": "rectangular",
-        "background_color": "#EEEAEA",
+        "collection": "adidas",
+        "image_fit": "cover",
+        "product_shape": "square",
+        "background_color": "#ffffff",
         "show_product_title": true,
         "show_product_price": true
       }
@@ -159,6 +162,7 @@
       ],
       "settings": {
         "hero_size": "hero1__50vh",
+        "image": "shopify:\/\/shop_images\/people-enjoying-a-day-at-the-beach-in-summer.jpg",
         "hero_alignment": "center",
         "background_color": "#000000",
         "opacity": 50
@@ -188,9 +192,11 @@
       ],
       "settings": {
         "hero_size": "hero2__50vh",
-        "background_color_img1": "#000000",
+        "image": "shopify:\/\/shop_images\/woman-infront-of-tree-with-berries.jpeg",
+        "background_color_img1": "#923c3c",
         "opacity_img1": 50,
-        "background_color_img2": "#000000",
+        "image_two": "shopify:\/\/shop_images\/woman-poses-in-dark-room.jpg",
+        "background_color_img2": "#334fb4",
         "opacity_img2": 50
       }
     }
