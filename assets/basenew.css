@@ -1,1 +1,21 @@
-:root{--body-bg:#f7f9fd}body{background-color:var(--body-bg)}.fixed-nav.nav-transparent .header{background:transparent}.fixed-nav.nav-transparent .header a{color:#fff}.fixed-nav .header{position:fixed;width:100%;z-index:20}
+:root {
+    --body-bg: #f7f9fd
+}
+
+body {
+    background-color: var(--body-bg)
+}
+
+.fixed-nav.nav-transparent .header {
+    background: transparent
+}
+
+.fixed-nav.nav-transparent .header a {
+    color: #fff
+}
+
+.fixed-nav .header {
+    position: fixed;
+    width: 100%;
+    z-index: 20
+}

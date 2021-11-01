@@ -2,16 +2,8 @@
 {% when 'header1' %}
 {{ 'Header1.css' | asset_url | stylesheet_tag }}
 
-<!--
-<header class="{%-if section.settings.sticky == false and section.settings.header_background == "transparent" -%}header header1 transparent-static
-{% elsif section.settings.sticky == true and section.settings.header_background == "white" %} header header1 white-fixed
-{% elsif section.settings.sticky == true and section.settings.header_background == "transparent" %} header header1 transparent-fixed
-{% else %}
-header header1
-{% endif %}">-->
-
 <header
-  class="header header1 {% if section.settings.header_background == "transparent"%}  trans  {% endif %} {% if section.settings.static == false %} transparent-fixed {% endif %} {% if section.settings.header_background == "white" %} chosen-white {% endif %}">
+  class="header header1 {% if section.settings.header_background == "transparent"%}  trans  {% endif %} {% if section.settings.header_background == "white" %} chosen-white {% endif %}">
 
   <ul class="header1__collections-nav">
     {%- if section.settings.menu != blank -%}
@@ -88,10 +80,12 @@ header header1
   </ul>
 </header>
 
+
+
 {% when 'header2' %}
 {{ 'Header2.css' | asset_url | stylesheet_tag }}
 <header
-  class="header header2 {% if section.settings.header_background == "transparent"%}  trans  {% endif %} {% if section.settings.static == false %} transparent-fixed {% endif %} {% if section.settings.header_background == "white" %} chosen-white {% endif %}">
+  class="header header2 {% if section.settings.header_background == "transparent"%}  trans  {% endif %} {% if section.settings.header_background == "white" %} chosen-white {% endif %}">
   <div class="header2__logo">
     <a href="{{ routes.root_url }}">
       {%- if section.settings.logo != blank -%}
@@ -155,7 +149,9 @@ header header1
 
 </header>
 
+
 {% when 'header3' %}
+
 {{ 'Header3.css' | asset_url | stylesheet_tag }}
 <!--<header class="{%-if section.settings.sticky == false and section.settings.header_background == "transparent" -%}header header3 transparent-static
     {% elsif section.settings.sticky == true and section.settings.header_background == "white" %} header header3 white-fixed
@@ -165,7 +161,7 @@ header header1
  {% endif %}">-->
 
 <header
-  class="header header3  {% if section.settings.header_background == "transparent"%}  trans  {% endif %} {% if section.settings.static == false %} transparent-fixed {% endif %} {% if section.settings.header_background == "white" %} chosen-white {% endif %} "
+  class="header header3  {% if section.settings.header_background == "transparent"%}  trans  {% endif %} {% if section.settings.header_background == "white" %} chosen-white {% endif %} "
   id="header3">
   <div class="header3__logo">
     <a href="{{ routes.root_url }}">
@@ -222,9 +218,8 @@ header header1
       <i class="lni lni-user"></i></a>
   </ul>
 </header>
-
-
 {% endcase %}
+
 <!--
 <script>
   console.log('loaded js from header')
@@ -404,12 +399,6 @@ header header1
 "label": "Alternate Menu"
 },
 {
-"type": "checkbox",
-"id": "static",
-"label": "Static header",
-"default": false
-},
-{
 "type": "radio",
 "id": "header_background",
 "label": "Header Background Type",
@@ -420,10 +409,10 @@ header header1
 },
 {
 "value": "white",
-"label": "Whiteyy"
+"label": "White"
 }
 ],
-"default": "transparent"
+"default": "white"
 }
 ]
 }

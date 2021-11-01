@@ -8,6 +8,17 @@
   <meta name="theme-color" content="">
   <link rel="canonical" href="{{ canonical_url }}">
   <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
 
   {%- if settings.favicon != blank -%}
   <link rel="icon" type="image/png" href="{{ settings.favicon | img_url: '32x32' }}">
@@ -148,7 +159,7 @@
   }
 
   .fixed-nav .header {
-  position: fixed;
+  position: absolute;
   width: 100%;
   z-index: 20
   }
@@ -166,16 +177,26 @@
   </script>
 </head>
 
-<body style="overflow-x: hidden;" style="background: var(--body-bg)">
+<body style="overflow-x: hidden;">
   <a class="skip-to-content-link button visually-hidden" href="#MainContent">
     {{ "accessibility.skip_to_text" | t }}
   </a>
 
   {% section 'announcement-bar' %}
+
+  {% if template == 'index' %}
+
   {% section 'header' %}
+
+  {% else %}
+
+  {% section 'header-alternative' %}
+
+  {% endif %}
 
   <main>
     {{ content_for_layout }}
+
   </main>
 
 
@@ -231,14 +252,16 @@
     $(window).scroll(function () {
       scroll = $(window).scrollTop();
       if (scroll >= 1) {
-        $('.white-fixed').css('top', '0');
         $('.transparent-fixed').css('top', '0');
+        $('.transparent-fixed').addClass('white-fixed');
       } else {
-        $('.white-fixed').css('top', 'initial');
         $('.transparent-fixed').css('top', 'initial');
+        $('.transparent-fixed').removeClass('white-fixed');
       }
     });
   </script>
+
+
 </body>
 
 </html>

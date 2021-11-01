@@ -71,8 +71,23 @@
     font-size: .8rem;
     border: 3px solid #fff;
     color: #fff;
-    margin-right: 70px;
-    transition: all ease-in-out .2s
+    transition: all ease-in-out .2s;
+}
+
+.hero1__25vh {
+    height: 25vh;
+}
+
+.hero1__50vh {
+    height: 50vh;
+}
+
+.hero1__75vh {
+    height: 75vh;
+}
+
+.hero1__100vh {
+    height: 100vh;
 }
 
 .hero1__button:hover {

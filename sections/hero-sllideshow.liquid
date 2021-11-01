@@ -1,0 +1,385 @@
+{{ 'Hero1.css' | asset_url | stylesheet_tag }}
+
+<div class="hero hero1 aligned-{{section.settings.hero_alignment}} {{section.settings.hero_size}}"
+    style="overflow-y: hidden;">
+
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="hero hero1 carousel-item active">
+
+
+                {%- if section.settings.slideshow_image1 != blank -%}
+
+                <img class="bg d-block w-100"
+                    srcset="{%- if section.settings.slideshow_image1.width >= 165 -%}{{ section.settings.slideshow_image1 | img_url: '165x' }} 165w,{%- endif -%}
+                  {%- if section.settings.slideshow_image1.width >= 360 -%}{{ section.settings.slideshow_image1 | img_url: '360x' }} 360w,{%- endif -%}
+                  {%- if section.settings.slideshow_image1.width >= 535 -%}{{ section.settings.slideshow_image1 | img_url: '535x' }} 535w,{%- endif -%}
+                  {%- if section.settings.slideshow_image1.width >= 750 -%}{{ section.settings.slideshow_image1 | img_url: '750x' }} 750w,{%- endif -%}
+                  {%- if section.settings.slideshow_image1.width >= 1070 -%}{{ section.settings.slideshow_image1 | img_url: '1070x' }} 1070w,{%- endif -%}
+                  {%- if section.settings.slideshow_image1.width >= 1500 -%}{{ section.settings.slideshow_image1 | img_url: '2000x' }} 2000w,{%- endif -%}"
+                    src="{{ section.settings.slideshow_image1 | img_url: '1500x' }}"
+                    sizes="(min-width: {{ settings.page_width }}px) 2000px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+                    alt="{{ section.settings.slideshow_image1.alt | escape }}" loading="lazy"
+                    width="{{ section.settings.slideshow_image1.width }}"
+                    height="{{ section.settings.slideshow_image1.height }}">
+
+                {%- else -%}
+
+                {{ 'image' | placeholder_svg_tag: 'placeholder-style' }}
+
+                {%- endif -%}
+
+
+
+
+
+
+            </div>
+            <div class="hero hero1 carousel-item">
+
+
+
+                {%- if section.settings.slideshow_image2 != blank -%}
+
+                <img class="bg d-block w-100"
+                    srcset="{%- if section.settings.slideshow_image2.width >= 165 -%}{{ section.settings.slideshow_image2 | img_url: '165x' }} 165w,{%- endif -%}
+                  {%- if section.settings.slideshow_image2.width >= 360 -%}{{ section.settings.slideshow_image2 | img_url: '360x' }} 360w,{%- endif -%}
+                  {%- if section.settings.slideshow_image2.width >= 535 -%}{{ section.settings.slideshow_image2 | img_url: '535x' }} 535w,{%- endif -%}
+                  {%- if section.settings.slideshow_image2.width >= 750 -%}{{ section.settings.slideshow_image2 | img_url: '750x' }} 750w,{%- endif -%}
+                  {%- if section.settings.slideshow_image2.width >= 1070 -%}{{ section.settings.slideshow_image2 | img_url: '1070x' }} 1070w,{%- endif -%}
+                  {%- if section.settings.slideshow_image2.width >= 1500 -%}{{ section.settings.slideshow_image2 | img_url: '2000x' }} 2000w,{%- endif -%}"
+                    src="{{ section.settings.slideshow_image2 | img_url: '1500x' }}"
+                    sizes="(min-width: {{ settings.page_width }}px) 2000px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+                    alt="{{ section.settings.slideshow_image2.alt | escape }}" loading="lazy"
+                    width="{{ section.settings.slideshow_image2.width }}"
+                    height="{{ section.settings.slideshow_image2.height }}">
+                {%- else -%}
+
+                {{ 'image' | placeholder_svg_tag: 'placeholder-style' }}
+
+                {%- endif -%}
+
+
+
+            </div>
+            <div class="hero hero1 carousel-item">
+
+                {%- if section.settings.slideshow_image3  != blank -%}
+
+                <img class="bg d-block w-100"
+                    srcset="{%- if section.settings.slideshow_image3.width >= 165 -%}{{ section.settings.slideshow_image3 | img_url: '165x' }} 165w,{%- endif -%}
+                  {%- if section.settings.slideshow_image3.width >= 360 -%}{{ section.settings.slideshow_image3 | img_url: '360x' }} 360w,{%- endif -%}
+                  {%- if section.settings.slideshow_image3.width >= 535 -%}{{ section.settings.slideshow_image3 | img_url: '535x' }} 535w,{%- endif -%}
+                  {%- if section.settings.slideshow_image3.width >= 750 -%}{{ section.settings.slideshow_image3 | img_url: '750x' }} 750w,{%- endif -%}
+                  {%- if section.settings.slideshow_image3.width >= 1070 -%}{{ section.settings.slideshow_image3 | img_url: '1070x' }} 1070w,{%- endif -%}
+                  {%- if section.settings.slideshow_image3.width >= 1500 -%}{{ section.settings.slideshow_image3 | img_url: '2000x' }} 2000w,{%- endif -%}"
+                    src="{{ section.settings.slideshow_image3 | img_url: '1500x' }}"
+                    sizes="(min-width: {{ settings.page_width }}px) 2000px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+                    alt="{{ section.settings.slideshow_image3.alt | escape }}" loading="lazy"
+                    width="{{ section.settings.slideshow_image3.width }}"
+                    height="{{ section.settings.slideshow_image3.height }}">
+                {%- else -%}
+
+                {{ 'image' | placeholder_svg_tag: 'placeholder-style' }}
+
+                {%- endif -%}
+
+            </div>
+            <div class="hero hero1 carousel-item">
+
+
+                {%- if section.settings.slideshow_image4 != blank -%}
+                <img class="bg d-block w-100"
+                    srcset="{%- if section.settings.slideshow_image4.width >= 165 -%}{{ section.settings.slideshow_image4 | img_url: '165x' }} 165w,{%- endif -%}
+                  {%- if section.settings.slideshow_image4.width >= 360 -%}{{ section.settings.slideshow_image4 | img_url: '360x' }} 360w,{%- endif -%}
+                  {%- if section.settings.slideshow_image4.width >= 535 -%}{{ section.settings.slideshow_image4 | img_url: '535x' }} 535w,{%- endif -%}
+                  {%- if section.settings.slideshow_image4.width >= 750 -%}{{ section.settings.slideshow_image4 | img_url: '750x' }} 750w,{%- endif -%}
+                  {%- if section.settings.slideshow_image4.width >= 1070 -%}{{ section.settings.slideshow_image4 | img_url: '1070x' }} 1070w,{%- endif -%}
+                  {%- if section.settings.slideshow_image4.width >= 1500 -%}{{ section.settings.slideshow_image4 | img_url: '2000x' }} 2000w,{%- endif -%}"
+                    src="{{ section.settings.slideshow_image4 | img_url: '1500x' }}"
+                    sizes="(min-width: {{ settings.page_width }}px) 2000px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+                    alt="{{ section.settings.slideshow_image4.alt | escape }}" loading="lazy"
+                    width="{{ section.settings.slideshow_image4.width }}"
+                    height="{{ section.settings.slideshow_image4.height }}">
+                {%- else -%}
+
+                {{ 'image' | placeholder_svg_tag: 'placeholder-style' }}
+
+                {%- endif -%}
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <!--  {%- if section.settings.image != blank -%}
+    <img class="bg"
+        srcset="{%- if section.settings.image.width >= 165 -%}{{ section.settings.image | img_url: '165x' }} 165w,{%- endif -%}
+                  {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | img_url: '360x' }} 360w,{%- endif -%}
+                  {%- if section.settings.image.width >= 535 -%}{{ section.settings.image | img_url: '535x' }} 535w,{%- endif -%}
+                  {%- if section.settings.image.width >= 750 -%}{{ section.settings.image | img_url: '750x' }} 750w,{%- endif -%}
+                  {%- if section.settings.image.width >= 1070 -%}{{ section.settings.image | img_url: '1070x' }} 1070w,{%- endif -%}
+                  {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | img_url: '2000x' }} 2000w,{%- endif -%}"
+        src="{{ section.settings.image | img_url: '1500x' }}"
+        sizes="(min-width: {{ settings.page_width }}px) 2000px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+        alt="{{ section.settings.image.alt | escape }}" loading="lazy" width="{{ section.settings.image.width }}"
+        height="{{ section.settings.image.height }}">
+    {%- else -%}
+
+    {{ 'image' | placeholder_svg_tag: 'placeholder-style' }}
+
+
+
+    {%- endif -%}-->
+
+    {% assign opacity = section.settings.opacity | divided_by: 100.00%}
+
+    {% style %}
+
+    .hero1__button{
+    background: {{settings.button_bg}};
+    color: {{settings.button_font_color}};
+    border-color: {{settings.button_border_color}};
+    }
+
+    .hero1__button:hover {
+    background: {{settings.button_bg_hover}};
+    color: {{settings.button_font_color_hover}}
+    }
+
+    {% endstyle %}
+
+    <div class="hero1__content-container"
+        style="background: {{ section.settings.background_color | color_modify: 'alpha', opacity }}">
+        <div class="hero1__info">
+
+            {%- for block in section.blocks -%}
+            {% case block.type %}
+            {%- when 'heading' -%}
+            <h1 class="hero1__title" style="font-size:{{block.settings.font_size}}px;">{{block.settings.title | escape}}
+            </h1>
+            <h2 class="image-with-text__heading h1" {{ block.shopify_attributes }}>
+                {{ block.settings.heading | escape }}
+            </h2>
+            {%- when 'paragraph' -%}
+            <p class="hero1__paragraph">{{block.settings.hero_text}}</p>
+            <div class="image-with-text__text rte" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
+            {%- when 'button' -%}
+            {%- if block.settings.button_label != blank -%}
+            <a href="{{block.settings.button_link}}" target="_blank" class="hero1__button"
+                {% if block.settings.button_link == blank %} aria-disabled="true" {% endif %}
+                {{ block.shopify_attributes }}>
+                {{ block.settings.button_label | escape }}
+            </a>
+            {%- endif -%}
+            {%- endcase -%}
+            {%- endfor -%}
+
+
+        </div>
+    </div>
+
+    <script src="{{ 'zepto.min.js' | asset_url}}"></script>
+
+
+
+</div>
+
+
+{% javascript %}
+class HeroOne extends HTMLElement {
+constructor() {
+super();
+
+const handleIntersection = (entries, observer) => {
+if (!entries[0].isIntersecting) return;
+observer.unobserve(this);
+
+fetch(this.dataset.url)
+.then(response => response.text())
+.then(text => {
+const html = document.createElement('div');
+html.innerHTML = text;
+const heroone = html.querySelector('hero-one');
+if (heroone && heroone.innerHTML.trim().length) {
+this.innerHTML = heroone.innerHTML;
+}
+})
+.catch(e => {
+console.error(e);
+});
+}
+
+new IntersectionObserver(handleIntersection.bind(this), {rootMargin: '0px 0px 200px 0px'}).observe(this);
+}
+}
+
+customElements.define('hero-one', heroone);
+{% endjavascript %}
+
+
+
+{% schema %}
+{
+"name": "Hero Slideshow",
+"class": "spaced-section spaced-section--full-width",
+"settings": [
+{
+"type": "select",
+"id": "hero_size",
+"options": [
+{
+"value": "hero1__25vh",
+"label": "25%"
+},
+{
+"value": "hero1__50vh",
+"label": "50%"
+},
+{
+"value": "hero1__75vh",
+"label": "75%"
+},
+{
+"value": "hero1__100vh",
+"label": "100%"
+}
+],
+"default": "hero1__100vh",
+"label": "Hero Size"
+},
+{
+"type": "image_picker",
+"id": "slideshow_image1",
+"label": "Slide Show Image 1"
+},
+{
+"type": "image_picker",
+"id": "slideshow_image2",
+"label": "Slide Show Image 2"
+},
+{
+"type": "image_picker",
+"id": "slideshow_image3",
+"label": "Slide Show Image 3"
+},
+{
+"type": "image_picker",
+"id": "slideshow_image4",
+"label": "Slide Show Image 4"
+},
+{
+"type": "select",
+"id": "hero_alignment",
+"options": [
+{
+"value": "center",
+"label": "Center"
+},
+{
+"value": "left",
+"label": "Left"
+},
+{
+"value": "right",
+"label": "Right"
+}
+],
+"default": "center",
+"label": "Alignment"
+},
+{
+"type": "color",
+"id": "background_color",
+"label": "Background filter",
+"default": "#000000"
+},
+{
+"type": "range",
+"id": "opacity",
+"min": 0,
+"max": 100,
+"step": 1,
+"label": "Opacity",
+"default": 50
+}
+],
+"blocks": [
+{
+"type": "heading",
+"name": "t:sections.image-with-text.blocks.heading.name",
+"limit": 1,
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "Title",
+"default": "Title"
+},
+{
+"type": "range",
+"id": "font_size",
+"min": 30,
+"max": 95,
+"step": 1,
+"unit": "px",
+"label": "Font size",
+"default": 55
+}
+]
+},
+{
+"type": "paragraph",
+"name": "Paragraph",
+"limit": 1,
+"settings": [
+{
+"type": "textarea",
+"id": "hero_text",
+"label": "Hero Text",
+"default": "Beard kickstarter affogato biodiesel jianbing. Tbh humblebrag truck cornhole."
+}
+]
+},
+{
+"type": "button",
+"name": "t:sections.image-with-text.blocks.button.name",
+"limit": 1,
+"settings": [
+{
+"type": "text",
+"id": "button_label",
+"default": "View More",
+"label": "t:sections.image-with-text.blocks.button.settings.button_label.label",
+"info": "t:sections.image-with-text.blocks.button.settings.button_label.info"
+},
+{
+"type": "url",
+"id": "button_link",
+"label": "t:sections.image-with-text.blocks.button.settings.button_link.label"
+}
+]
+}
+],
+"presets": [
+{
+"name": "Hero Slideshow",
+"blocks": [
+{
+"type": "heading"
+},
+{
+"type": "paragraph"
+},
+{
+"type": "button"
+}
+]
+}
+]
+}
+{% endschema %}

@@ -1,4 +1,5 @@
 {{ 'Collection.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'vue.js' | asset_url }}"></script>
 
 {% if section.settings.collection.all_products_count %}
 <div class="collection collection1">
@@ -6,24 +7,26 @@
         <div class="row">
             {%- for product in section.settings.collection.products limit: section.settings.product_display -%}
 
-            <div
-                class="{{ section.settings.xl_devices }} {{ section.settings.lg_devices }} {{ section.settings.md_devices }} {{ section.settings.sm_devices }}">
+            <div class="{{ section.settings.sm_devices }}">
                 <div class="collection1__collection-item ">
+
                     <div class="collection1__heart">
                         <i class="lni lni-heart"></i>
                     </div>
-                    <div class="collection1__product-image {{section.settings.product_shape}}"
-                        style="background:{{section.settings.background_color}}">
+
+                    <a href="{{ product.url }}">
+                        <div class="collection1__product-image {{section.settings.product_image_shape}} {{ section.settings.sm_devices}}"
+                            style="background:{{section.settings.image_background_color}}">
 
 
 
 
 
-                        {%- if product.images[0] != blank -%}
+                            {%- if product.images[0] != blank -%}
 
-                        {%- if section.settings.product_shape == "rectangular" -%}
+                            {%- if section.settings.product_shape == "rectangular" -%}
 
-                        <a href="{{ product.url }}">
+
                             <img class="bg"
                                 srcset="{%- if product.images[0].width >= 165 -%}{{ product.images[0] | img_url: '165x' }} 165w,{%- endif -%}
                                       {%- if product.images[0].width >= 360 -%}{{ product.images[0] | img_url: '360x' }} 360w,{%- endif -%}
@@ -35,9 +38,9 @@
                                 sizes="(min-width: {{ settings.page_width }}px) 2000px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
                                 alt="{{ product.images[0].alt | escape }}" loading="lazy"
                                 width="{{ product.images[0].width }}" height="{{ product.images[0].height }}"
-                                style="object-fit: {{section.settings.image_fit}};"></a>
-                        {%-else-%}
-                        <a href="{{ product.url }}">
+                                style="object-fit: {{section.settings.image_fit}}; transform: scale({{section.settings.image_size}});">
+
+                            {%-else-%}
                             <img class="bg"
                                 srcset="{%- if product.images[0].width >= 165 -%}{{ product.images[0] | img_url: '165x' }} 165w,{%- endif -%}
                                       {%- if product.images[0].width >= 360 -%}{{ product.images[0] | img_url: '360x' }} 360w,{%- endif -%}
@@ -48,22 +51,23 @@
                                 src="{{ product.images[0]}}"
                                 sizes="(min-width: {{ settings.page_width }}px) 2000px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
                                 alt="{{ product.images[0].alt | escape }}" loading="lazy" width="400" height="190"
-                                style="object-fit: {{section.settings.image_fit}};"></a>
-                        {%- endif- %}
-                        {%- else -%}
-                        <img src="https://images.pexels.com/photos/4814633/pexels-photo-4814633.jpeg?cs=srgb&dl=pexels-jonaorle-4814633.jpg&fm=jpg"
-                            class="bg">
+                                style="object-fit: {{section.settings.image_fit}}; transform: scale({{section.settings.image_size}});">
+                            {%- endif- %}
+                            {%- else -%}
+                            <img src="https://images.pexels.com/photos/4814633/pexels-photo-4814633.jpeg?cs=srgb&dl=pexels-jonaorle-4814633.jpg&fm=jpg"
+                                class="bg">
 
-                        {%- endif -%}
-
-
+                            {%- endif -%}
 
 
 
 
 
 
-                    </div>
+
+
+                        </div>
+                    </a>
 
                     <div class="collection1__product-info" style="margin-bottom:60px;">
                         {%- if section.settings.show_product_title == true -%}
@@ -75,7 +79,7 @@
 
                         {%- if section.settings.show_product_price == true -%}
                         <span class="collection1__product-price">
-                            $ {{product.price}}
+                            {{product.price | money}}
                         </span>
                         {%- endif -%}
 
@@ -234,6 +238,7 @@
 {% endif %}
 
 
+
 {% schema %}
 {
 "name": "Collection Product Single",
@@ -250,7 +255,7 @@
 },
 {
 "type": "select",
-"id": "xl_devices",
+"id": "xl_device",
 "options": [
 {
 "value": "col-xl-6",
@@ -269,7 +274,7 @@
 "label": "6 columns"
 }
 ],
-"default": "col-xl-4",
+"default": "col-xl-3",
 "label": "Extra Large Devices"
 },
 {
@@ -367,7 +372,7 @@
 },
 {
 "type": "select",
-"id": "product_shape",
+"id": "product_image_shape",
 "options": [
 {
 "value": "circle",
@@ -382,14 +387,14 @@
 "label": "Square"
 }
 ],
-"default": "rectangular",
+"default": "square",
 "label": "Shape of Product"
 },
 {
 "type": "color",
-"id": "background_color",
-"label": "Background filter",
-"default": "#EEEAEA"
+"id": "image_background_color",
+"label": "Image background color",
+"default": "#FFFFFF"
 },
 {
 "type": "checkbox",
@@ -402,6 +407,15 @@
 "id": "show_product_price",
 "label": "Show price",
 "default": true
+},
+{
+"type": "range",
+"id": "image_size",
+"min": 1,
+"max": 2.5,
+"step": 0.5,
+"label": "Image Size",
+"default": 1
 }
 ],
 "blocks":[{

@@ -1,1 +1,116 @@
-.hero2{height:100vh;width:100%;overflow-x:hidden;position:relative;display:flex}.hero2 .hero2__collection1{width:50%;position:relative;height:100%}.hero2.aligned-center .hero2__content-container{justify-content:center;margin-top:10rem}.hero2.aligned-left .hero2__content-container{justify-content:flex-start;padding-left:10rem}.hero2.aligned-right .hero2__content-container{justify-content:flex-end;padding-left:10rem}.hero2 .bg{position:absolute;-o-object-fit:cover;object-fit:cover;-o-object-position:center;object-position:center;width:100%;height:100%;z-index:1}.hero2__content-container{position:absolute;top:0;left:0;z-index:1;width:100%;height:100%;display:flex;align-items:flex-end;background:rgba(0,0,0,.5);padding-bottom:15rem}.hero2__info{max-width:400px;text-align:center;color:#fff}.hero2__title{font-size:3rem;font-family:"Playball",cursive;color:#fff}.hero2__paragraph{margin-bottom:2rem}.hero2__button{margin-top:40px;display:block;padding:20px;text-decoration:none;background:transparent;width:200px;margin:0 auto;font-weight:700;font-size:.8rem;border:3px solid #fff;color:#fff;margin-right:70px;transition:all ease-in-out .2s}.hero2__button:hover{background:#fff;color:#000}.hero2 .hero2__collection2{width:50%;position:relative;height:100%}.hero2 .hero2__collection2 .hero2__content-container{justify-content:flex-start;padding-left:4rem}
+.hero2 {
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    display: flex
+}
+
+.hero2 .hero2__collection1 {
+    width: 50%;
+    position: relative;
+    height: 100%
+}
+
+.hero2.aligned-center .hero2__content-container {
+    justify-content: center;
+    margin-top: 10rem
+}
+
+.hero2.aligned-left .hero2__content-container {
+    justify-content: flex-start;
+    padding-left: 10rem
+}
+
+.hero2.aligned-right .hero2__content-container {
+    justify-content: flex-end;
+    padding-left: 10rem
+}
+
+.hero2 .bg {
+    position: absolute;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    z-index: 1
+}
+
+.hero2__content-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    background: rgba(0, 0, 0, .5);
+    padding-bottom: 15rem
+}
+
+.hero2__info {
+    max-width: 400px;
+    text-align: center;
+    color: #fff
+}
+
+.hero2__title {
+    font-size: 3rem;
+    font-family: "Playball", cursive;
+    color: #fff
+}
+
+.hero2__paragraph {
+    margin-bottom: 2rem
+}
+
+.hero2__button {
+    margin-top: 40px;
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    background: transparent;
+    width: 200px;
+    margin: 0 auto;
+    font-weight: 700;
+    font-size: .8rem;
+    border: 3px solid #fff;
+    color: #fff;
+    margin-right: 70px;
+    transition: all ease-in-out .2s
+}
+
+.hero2__button:hover {
+    background: #fff;
+    color: #000
+}
+
+.hero2 .hero2__collection2 {
+    width: 50%;
+    position: relative;
+    height: 100%
+}
+
+.hero2 .hero2__collection2 .hero2__content-container {
+    justify-content: flex-start;
+    padding-left: 4rem
+}
+
+.hero2__25vh {
+    height: 25vh;
+}
+
+.hero2__50vh {
+    height: 50vh;
+}
+
+.hero2__75vh {
+    height: 75vh;
+}
+
+.hero2__100vh {
+    height: 100vh;
+}
